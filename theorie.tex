@@ -1,12 +1,61 @@
 \section{Ziel}
 \label{sec:Ziel}
+In diesem Versuch soll der Temperaturverlauf der Molwärme von 
+Kupfer untersucht werden. Die gemessenen Werte werden mit dem 
+Dulong-Petit-Modell, dem Einstein-Modell und dem Debye-Modell 
+verglichen.
 
 \section{Theorie}
 \label{sec:Theorie}
+Bei der Wärmekapazität eines Stoffes handelt es sich um die Wärmemenge $\increment Q$, die 
+man ihm zufügen muss, um eine gewisse Temperaturänderung $\increment T$ zu erzielen:
+\begin{equation*}
+    C = \frac{\increment Q}{\increment T}.
+\end{equation*}
+Diese Größe kann auf die Masse, das Volumen oder der Stoffmenge einer Probe bezogen werden. 
+In diesem Versuch wird die molare Wärmekapazität, auch Molwärme genannt, untersucht, die sich über 
+\begin{equation*}
+    c^{\si{m}} = \frac{c}{\si{mol}}
+\end{equation*}
+aus der Wärmekapazität berechnet. 
 
-%\begin{figure}
-%  \centering
-%  \includegraphics[width=0.55\textwidth]{Hysteresekurve.png}
-%  \caption{Hysteresekurve [1].}
-%  \label{fig:hkurve}
-%\end{figure}
+Die Molwärme hängt davon ab, ob man sie bei konstantem Druck $P$ oder konstantem Volumen $V$ der Probe betrachtet. Da bei einem nicht konstantem Volumen 
+Energie für die Ausdehnung des Stoffes benötigt wird, ist die Molwärme bei konstantem Druck $C_{\si{P}}$ größer als die Molwärme bei konstantem Volumen $C_{\si{V}}$. 
+Da der Druck leichter konstant zu halten ist, wird meistens die Molwärme bei konstantem Druck bestimmt. 
+Die beiden Werte lassen sich aber über die Beziehung 
+\begin{equation}
+    \label{eqn:cv}
+    C_{\si{V}}=C_{\si{P}}-9\alpha ^2 n  V_0 T
+\end{equation}
+ineinander umrechnen. Dieser Unterschied ist bei Festkörpern nur gering, da sie sich nur wenig ausdehnen.
+
+Da in diesem Versuch die Wärmeenergie mit einem über ein Zeitintervall $t$ angeschlossenen Heizstrom $I$ zugeführt wird, 
+berechnet sich die Molwärme über
+\begin{equation}
+    \label{eqn:cp}
+    C_{\si{p}} = \frac{M}{m} \frac{U\cdot I \cdot t}{\increment T},
+\end{equation}
+wobei $U$ die Heizspannung ist.
+\\
+
+Nach klassischer Betrachtung ist die Molwärme konstant $3R$, wobei $R$ die allgemeine Gaskonstante ist. Das nennt sich Dulong-Petit-Gesetz. 
+Demnach wäre die Molwärme unabhängig von der Temperatur für alle Stoffe gleich. 
+Im Experiment zeigt sich jedoch, dass die Molwärme für tiefe Temperaturen stark davon abweicht, aber sich für 
+hohe Temperaturen an den Dulong-Petit-Wert annähert. Die Molwärme zeigt für tiefe Temperaturen eine $T^3$-Abhängigkeit. 
+
+
+Das kann mit der Quantenmechanik erklärt werden, indem die Gitterschwingungen des Kristallgitters 
+berücksichtigt werden. Ein quantenmechanischer harmonischer Oszillator kann nur bestimmte Energiebeträge aufnehmen, 
+denn es sind nur die Energiewerte $ E_{\si{n}} = (n+\frac{1}{2}) \hbar \omega $ möglich. Ist die Wärmeenergie $k_{\si{B}}T$ mit der Boltzmann-Konstant $k_{\si{B}}$
+nun viel kleiner als $\hbar\omega$, kann dieser Energiebetrag nicht merh aufgenommen werden. 
+Da in einem Kristall verschiedene Eigenfrequenzen $\omega$ vorkommen, werden mit sinkender Temperatur nach und nach immer weniger 
+Oszillatoren die Wärmeenergie aufnehmen können. Dadurch wird die Energie, die für eine Temperaturerhöhung nötig ist, größer. 
+\\
+
+Zur Beschreibung des Temperaturverlaufs bei tieferen Temperaturen gibt es zwei Modelle, das Einstein- und das Debye-Modell. 
+
+
+
+
+
+
