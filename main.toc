@@ -9,4 +9,4 @@
 \contentsline {subsection}{\numberline {4.2}Bestimmung der Debye-Temperatur}{7}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Bestimmung des Theoriewerts von der Debye-Frequenz und Debye-Temperatur.}{8}{subsection.4.3}
 \contentsline {section}{\numberline {5}Diskussion}{9}{section.5}
-\contentsline {section}{\numberline {6}Literatur}{9}{section.6}
+\contentsline {section}{\numberline {6}Literatur}{10}{section.6}
