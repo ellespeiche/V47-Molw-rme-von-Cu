@@ -7,6 +7,6 @@
 \contentsline {section}{\numberline {4}Auswertung}{3}{section.4}
 \contentsline {subsection}{\numberline {4.1}Messung der Molwärme bei konstantem Druck und Berechnung der Molwärme bei konstantem Volumen}{3}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Bestimmung der Debye-Temperatur}{7}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Bestimmung des Theoriewerts von der Debye-Frequenz und Debye-Temperatur.}{8}{subsection.4.3}
-\contentsline {section}{\numberline {5}Diskussion}{9}{section.5}
-\contentsline {section}{\numberline {6}Literatur}{10}{section.6}
+\contentsline {subsection}{\numberline {4.3}Bestimmung des Theoriewerts von der Debye-Frequenz und Debye-Temperatur.}{10}{subsection.4.3}
+\contentsline {section}{\numberline {5}Diskussion}{11}{section.5}
+\contentsline {section}{\numberline {6}Literatur}{12}{section.6}

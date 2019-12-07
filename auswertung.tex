@@ -155,10 +155,32 @@ Der Graph ist in Abbildung \ref{fig:cv} zu sehen.
 
 \subsection{Bestimmung der Debye-Temperatur}
 
-Im Folgenden wird nur der Temperaturbereich bis $\SI{170}{\kelvin}$ betrachetet. 
-Mithilfe der Tabelle in Abbildung \ref{fig:Td}, lässt sich zu den Werten der Molwärme bei konstantem Volumen
+Im Folgenden wird nur der Temperaturbereich bis $\SI{170}{\kelvin}$ betrachetet. D.h. der Bereich der Molwärme 
+bei kontantem Volumen der hier betrachtet wird ist derjenige von $(14,4-21,0) \frac{\si{J}}{\si{mol K}}$.
+Mithilfe der Tabelle in Abbildung \ref{fig:Td}, lässt sich zu manchen Werten der Molwärme bei konstantem Volumen
 der Quotient $Q=\frac{\Theta_{\si{D}}}{T}$ ablesen. Die Debye-Temperatur wird dabei als $\Theta_{\si{D}}$ 
-bezeichnet. Die Wertepaare sind in Tabelle \ref{TabTd} aufgelistet.
+bezeichnet. Mithilfe dieser Tabelle wird die Funktion 
+der Molwäre in Abhängigkeit von dem Quotienten gefittet. Hierfür werden nur im relevanten Bereich der 
+Molwärme die entsprechenden Wertepaare der Tabelle in einen Graphen eingetragen und eine lineare Regression 
+der Form 
+\begin{align*}
+    Q = a \cdot C_{\si{v}} + b
+\end{align*}
+durchgeführt. Daraus ergibt sich für die Steigung $a$ und den Achsenabschnitt $b$
+\begin{align*}
+    a &= (-0,2454 \pm 0,0015) \frac{\si{molK}}{\si{J}}\\
+    b &= 7,053 \pm 0,028.
+\end{align*}
+Nun wurden die entsprechnenden Werte für den Quotienten mithilfe der Formel 
+\begin{align*}
+    Q = - 0,2454\frac{\si{molK}}{\si{J}} \cdot C_{\si{v}} + 7,053
+\end{align*}
+berechnet. Der Fehler ergibt sich durch die Gauß'sche Fehlerfortpflanzung aus
+\begin{equation*}
+    \symup{\Delta} Q = \sqrt{C_{\si{v}}² \symup{\Delta}a² + \symup{\Delta}b²}.
+\end{equation*}
+Die Wertepaare sind in Tabelle \ref{TabTd} aufgelistet, die lineare Regression ist in Abbildung 
+\ref{fig:Q} zu sehen. 
  
 \begin{figure}
   \centering
@@ -167,10 +189,19 @@ bezeichnet. Die Wertepaare sind in Tabelle \ref{TabTd} aufgelistet.
   \caption{Zahlenwerte der Debye-Funktion[1].}
   \label{fig:Td}
 \end{figure}
+\FloatBarrier
+
+\begin{figure}
+  \centering
+  \includegraphics{Q.pdf}
+  \caption{lineare Regression zur Bestimmung des Quotienten.}
+  \label{fig:Q}
+\end{figure}
+\FloatBarrier
 
 \begin{table}
     \centering
-    \caption{Werte zur Bestimmung des Quotienten, und der abgelesene Quotient sowie die daraus ermittelte Debye-Temperatur.}
+    \caption{Werte zur Bestimmung des Quotienten, und der berechnete Quotient sowie die daraus ermittelte Debye-Temperatur.}
     \label{TabTd}
     \sisetup{table-format=1.2}
     \begin{tabular}{S S S[table-format=2.2] S } %3 ziffern vom kommer, zwei danach, geht hiter jedes s
@@ -180,14 +211,14 @@ bezeichnet. Die Wertepaare sind in Tabelle \ref{TabTd} aufgelistet.
        {$T$/K} & {$C_{\si{v}}$/$\frac{\si{J}}{\si{molK}}$} & {$Q$} & {$\Theta_{\si{D}}$/K} \\
       \midrule
       \midrule
-        {~93,1} & {14,4}& {3,5} & {325,9} \\
-        {103,4} & {15,8}& {3,2} & {330,9} \\
-        {113,4} & {17,1}& {2,9} & {328,9} \\
-        {123,4} & {18,9}& {2,4} & {296,2} \\
-        {133,3} & {19,3}& {2,3} & {306,6} \\
-        {143,0} & {20,1}& {2,1} & {300,3} \\
-        {153,2} & {21,0}& {1,9} & {291,1} \\
-        {163,2} & {21,0}& {1,9} & {310,2} \\
+        {~93,1} & {14,4}& {3,52 $\pm$ 0,04} & {325,9 $pm$ 3,7} \\
+        {103,4} & {15,8}& {3,18 $\pm$ 0,04} & {330,9 $pm$ 4,1} \\
+        {113,4} & {17,1}& {2,86 $\pm$ 0,04} & {328,9 $pm$ 4,5} \\
+        {123,4} & {18,9}& {2,41 $\pm$ 0,04} & {296,2 $pm$ 4,9} \\
+        {133,3} & {19,3}& {2,32 $\pm$ 0,04} & {306,6 $pm$ 5,3} \\
+        {143,0} & {20,1}& {2,12 $\pm$ 0,04} & {300,3 $pm$ 5,7} \\
+        {153,2} & {21,0}& {1,90 $\pm$ 0,04} & {291,1 $pm$ 6,1} \\
+        {163,2} & {21,0}& {1,90 $\pm$ 0,04} & {310,2 $pm$ 6,5} \\
       \bottomrule
     \end{tabular}
 \end{table}
@@ -198,17 +229,25 @@ wird die Gleichung des Quotienten zu
 \begin{equation*}
     \Theta_{\si{D}} = Q \cdot T
 \end{equation*} 
-umgeformt. Die so berechneten Debye-Temperatur sind auch in Tabelle \ref{TabTd} eingetragen.
+umgeformt. 
+Der Fehler ist berechnet mit der Gauß'schen Fehlerfortpflanzung 
+\begin{equation}
+    \symup{\Delta}\Theta_{si{D}} = T \cdot \symup{\Delta}Q.
+\end{equation}
+Die so berechneten Debye-Temperatur sind auch in Tabelle \ref{TabTd} eingetragen.
 
 Der Mittelwert von der Debye-Temperatur ergibt sich aus
 \begin{equation*}
-  \overline{\Theta_{\si{D}}}=  \frac{1}{N} \sum_{i=1}^N (\Theta_{\si{D}i}) = \SI{311,2}{\kelvin}.
+  \overline{\Theta_{\si{D}}}=  \frac{1}{N} \sum_{i=1}^N (\Theta_{\si{D}i}) = \SI{311,2}{\kelvin},
 \end{equation*}
-Der Fehler des Mittelwerts ist
+%Der Fehler des Mittelwerts ist 
+%\begin{equation*}
+%  \symup{\Delta} \Theta_{\si{D}} = \frac{1}{\sqrt{N}} \sqrt{\frac{1}{\sqrt{N-1}} \sum_{i=1}^N (\Theta_{\si{D}i}-\overline{\Theta_{\si{D}}})²}= \SI{5,5}{\kelvin},
+%\end{equation*}
+wobei $N=8$ die Anzahl der Messwerte ist. Der Fehler ergibt sich durch den Mittelwert des Fehlers zu 
 \begin{equation*}
-  \symup{\Delta} \Theta_{\si{D}} = \frac{1}{\sqrt{N}} \sqrt{\frac{1}{\sqrt{N-1}} \sum_{i=1}^N (\Theta_{\si{D}i}-\overline{\Theta_{\si{D}}})²}= \SI{5,5}{\kelvin},
+  \symup{\Delta} \Theta_{\si{D}} = \SI{5,1}{\kelvin},
 \end{equation*}
-wobei $N=8$ die Anzahl der Messwerte ist.
 
 
 
